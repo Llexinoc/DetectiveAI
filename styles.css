@@ -1,0 +1,80 @@
+body {
+    width: 200px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    position: relative;
+}
+
+h1 {
+    color: #4a90e2;
+}
+
+p {
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+/* Hide icons initially */
+.icon {
+    width: 50px;
+    height: 50px;
+    margin: 10px auto;
+    display: none;
+    border-radius: 50%;
+}
+
+/* Guard Icon (AI Detected) */
+.ai-detected-icon {
+    background-color: green;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.6);
+    animation: pulse-green 2s infinite;
+}
+
+@keyframes pulse-green {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(0, 255, 0, 0.6);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(0, 255, 0, 0.6);
+    }
+}
+
+/* Red Orb (No AI Detected) */
+.no-ai-detected-icon {
+    background-color: red;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+    animation: pulse-red 2s infinite;
+}
+
+@keyframes pulse-red {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+    }
+}
+
+/* Text Color Classes */
+.ai-detected {
+    color: green;
+    font-weight: bold;
+}
+
+.no-ai-detected {
+    color: red;
+    font-weight: bold;
+}
